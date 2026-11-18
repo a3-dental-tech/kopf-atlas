@@ -7,7 +7,7 @@
  "display": "standalone",
  "orientation": "any",
  "background_color": "#1f2b12",
- "theme_color": "#18220d",
+ "theme_color": "#ffffff",
  "description": "3D-Atlas von Kopf und Kauapparat für Zahntechnik-Lernende",
  "icons": [
   {
