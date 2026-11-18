@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#18220d">
+<meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="A3 Dental Tech">
@@ -23,11 +23,13 @@
       <ul id="treffer" hidden></ul>
     </div>
     <nav id="modi" aria-label="Modus">
-      <button data-modus="atlas" class="an">Atlas</button>
-      <button data-modus="play">Play</button>
-      <button data-modus="quiz">Quiz</button>
-      <button data-modus="welt">Zahn-Welt</button>
-      <button data-modus="okk">Okklusion</button>
+      <button data-menu="atlas" class="an">Atlas</button>
+      <button data-menu="play">Play</button>
+      <button data-menu="quiz">Quiz</button>
+      <button data-menu="welt">Zahn-Welt</button>
+      <button data-menu="gelenk">Gelenk &amp; Bewegungen</button>
+      <button data-menu="artikulator">Artikulator</button>
+      <button data-menu="prothese">Totalprothese</button>
     </nav>
     <button id="quellenKnopf" class="rund" aria-label="Quellen und Lizenzen" title="Quellen und Lizenzen">i</button>
   </header>
@@ -57,7 +59,7 @@
     <p id="makroHinweis" hidden>Schematisches Modell (nicht massstabsgetreu): Schnitt durch einen unteren Molaren im Zahnfach.
       <span><button class="btn klein" data-lupe="schmelzprisma">Lupe: Schmelzprismen</button><button class="btn klein" data-lupe="dentinkanaelchen">Lupe: Dentinkanälchen</button><button class="btn klein" data-lupe="">Ganzer Zahn</button></span></p>
     <div id="tafel" hidden><div class="t-kopf"><b id="tafelTitel"></b><span class="w-schema" id="tafelHinweis"></span><button class="btn klein haupt" id="tafelZu">× Schliessen</button></div><div class="t-bild"><img id="tafelBild" alt=""><span id="tafelPunkte"></span></div><ol id="tafelLegende"></ol><small id="tafelQuelle"></small></div>
-    <div id="zeigTitel" hidden><b></b><span></span><button id="zeigZu" class="btn klein" aria-label="Zeigen beenden">■ Stopp</button></div>
+    <div id="zeigTitel" hidden><b></b><span></span><button id="zeigPause" class="btn klein" hidden>❚❚ Pause</button><button id="zeigWeiter" class="btn klein" hidden>Weiter ▶▶</button><button id="zeigZu" class="btn klein" aria-label="Zeigen beenden">■ Stopp</button></div>
     <div id="gelenkFenster" hidden><div class="gf-reihe"><div data-g="sag"><b></b><span class="gf-punkte"></span><span class="gf-knopf"><button type="button" data-gz="-1" aria-label="kleiner">−</button><button type="button" data-gz="1" aria-label="grösser">+</button><button type="button" data-gm="1" aria-pressed="false">Muskeln</button></span></div><div data-g="fro"><b></b><span class="gf-punkte"></span><span class="gf-knopf"><button type="button" data-gz="-1" aria-label="kleiner">−</button><button type="button" data-gz="1" aria-label="grösser">+</button><button type="button" data-gm="1" aria-pressed="false">Muskeln</button></span></div></div><div class="gf-zeile"><b id="gfSeiten"></b><button class="btn klein" id="gfWechsel">anderes Gelenk</button></div><ol id="gfLegende" hidden></ol></div>
     <div id="filmKasten" hidden></div>
     <div id="weltPfad" hidden></div>
@@ -76,6 +78,7 @@
         <button id="dPlay" class="btn haupt">▶ Play</button>
         <button id="dPause" class="btn">❚❚ Pause</button>
         <button id="dWeiter" class="btn">Weiter ▶▶</button>
+        <button id="dStopp" class="btn">■ Stopp</button>
         <span id="dZahl"></span>
       </div>
       <div class="balken"><i id="dBalken"></i></div>
@@ -104,11 +107,13 @@
 
   <nav id="unten" aria-label="Navigation">
     <button data-auf="links">☰<span>Ebenen</span></button>
-    <button data-modus="atlas" class="an">◉<span>Atlas</span></button>
-    <button data-modus="play">▶<span>Play</span></button>
-    <button data-modus="quiz">?<span>Quiz</span></button>
-    <button data-modus="welt">◈<span>Zahn-Welt</span></button>
-    <button data-modus="okk">⇄<span>Okklusion</span></button>
+    <button data-menu="atlas" class="an">◉<span>Atlas</span></button>
+    <button data-menu="play">▶<span>Play</span></button>
+    <button data-menu="quiz">?<span>Quiz</span></button>
+    <button data-menu="welt">◈<span>Zahn-Welt</span></button>
+    <button data-menu="gelenk" aria-label="Gelenk und Bewegungen">⇄<span>Gelenk</span></button>
+    <button data-menu="artikulator">⚙<span>Artiku&shy;lator</span></button>
+    <button data-menu="prothese">◡<span>Total&shy;prothese</span></button>
     <button data-auf="rechts">▤<span>Info</span></button>
   </nav>
 </div>
